@@ -17,7 +17,7 @@ def hidroweb(dir_dados):
                     skiprows,coluna_inicio,coluna_fim=13,13,12
                 elif file[:5]=='cotas':
                     skiprows,coluna_inicio,coluna_fim=14,16,15
-                df=pd.read_csv(dir_dados+'\\'+file,sep=';',skiprows=skiprows,header=None)
+                df=pd.read_csv(dir_dados+'/'+file,sep=';',skiprows=skiprows,header=None)
                 #df[2]=df[2].apply(lambda x:str(x))
                 df[2]=df[2].apply(lambda x:'01'+x[2:])
                 df[2] =  pd.to_datetime(df[2], format='%d/%m/%Y')
